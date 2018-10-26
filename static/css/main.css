@@ -3,15 +3,17 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-}
-
-body {
+  height: 100%;
+  font-family: 'roboto', serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
 }
 
+h1, h2, h3, h4, h5, h6, .nav, .article-duration, .archive-item-link, .footer {
+  font-family: 'Times New Roman', sans-serif;
+}
 h1,
 h2,
 h3,
@@ -25,13 +27,44 @@ a {
   outline: none;
 }
 
+blockquote {
+  border-left: none;
+  padding-left: 1em;
+}
+
 code {
-  background-color: rgba(0, 0, 0, 0.02);
+  font-style: italic;
+  font-family: serif;
+}
+
+.article  img {
+  margin: 0 auto;
+  width: 1092px;
+  margin-left: -196px;
+  box-shadow: 2px 4px 16px 1px darkgrey;
+}
+
+pre > code, .highlight {
+  display: block;
+  font-size: .85em;
+  margin: 0 -9999em;
+  padding: 0.25em 9999em;
+  color: black;
+  background: lightgrey;
+  font-style: initial;
+  font-family: monospace;
+  line-height: 1.15;
+}
+
+.highlight {
+  box-shadow: inset 0 0 16px black;
 }
 
 .wrapper {
   overflow: hidden;
   position: relative;
+  min-height: 100%;
+  margin: 0 auto 30px;
 }
 
 .header {
@@ -104,6 +137,7 @@ code {
   color: #222;
   margin: 0;
   line-height: 1.3;
+  font-variant: small-caps;
 }
 
 .article-date {
@@ -121,8 +155,10 @@ code {
   color: #fff
 }
 
+
 .article-content p {
   margin: 15px 0 25px;
+  text-align: justify;
 }
 
 .article-content a {
@@ -148,15 +184,17 @@ code {
   background: #e5e5e5;
 }
 
-.highlight {
-  border-radius: 3px;
-  position: relative;
-  margin: 40px 0;
-  font-size: 14px;
+.read-more-link > a {
+  color: black;
+  text-decoration: none;
+  font-size: .8em;
+  font-style: italic;
 }
 
-.highlight pre {
-  padding: 10px;
+.summary {
+  text-align: justify;
+  font-size: 0.8em;
+  padding: 0 0 0 10%;
 }
 
 .archive {
@@ -194,6 +232,7 @@ code {
   color: #222;
   padding: 5px 0;
   border-bottom: 1px solid #ddd;
+  font-variant: small-caps;
 }
 
 .archive-item-link:hover {
@@ -202,6 +241,9 @@ code {
 
 .footer {
   padding: 25px 0;
+  height: 90px;
+  width: 100%;
+  margin: 0 auto -30px;
   text-align: center;
 }
 
@@ -269,12 +311,11 @@ code {
 
   .content {
     font-size: 19px;
-    line-height: 1.8;
+    line-height: 1.6;
   }
 
   .highlight {
     font-size: 16px;
-    margin: 40px -20px;
   }
 
   .archive {
