@@ -37,10 +37,24 @@ code {
   font-family: serif;
 }
 
-.article  img {
-  margin: 0 auto;
+.article img {
+  display: block;
+  margin-left: -192px;
+  margin-right: auto;
   width: 1092px;
-  margin-left: -196px;
+  box-shadow: 2px 4px 16px 1px darkgrey;
+}
+
+.article-img {
+ margin-left: -192px;
+ margin-right: -192px;
+}
+
+.article div > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1092px;
   box-shadow: 2px 4px 16px 1px darkgrey;
 }
 
@@ -70,7 +84,7 @@ pre > code, .highlight {
 .header {
   padding: 20px 0;
   position: relative;
-  background: #f5f5f5;
+  background: #ecf2fe;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -85,6 +99,13 @@ pre > code, .highlight {
   float: left;
   margin-top: -11px;
   transition: transform 150ms ease-out;
+}
+
+.nav-title {
+  text-decoration: none;
+  float: left;
+  margin-top: -25px;
+  margin-left: 5px;
 }
 
 .nav-logo:hover {
@@ -116,11 +137,13 @@ pre > code, .highlight {
 
 .nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #000;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-links a:hover {
   color: #000;
+  border-bottom: 1px solid #000;
 }
 
 .content {
@@ -140,12 +163,17 @@ pre > code, .highlight {
   font-variant: small-caps;
 }
 
-.article-date {
+.article-author {
   color: #ccc;
 }
 
+.article-date {
+  color: #ccc;
+  float: right;
+}
+
 .article-duration {
-  margin-top: 12px;
+  margin-top: 22px;
   float: right;
   font-size: 10px;
   padding: 1px 5px;
@@ -164,15 +192,16 @@ pre > code, .highlight {
 .article-content a {
   text-decoration: none;
   color: inherit;
-  border-bottom: 3px solid #CBF8DF;
-  box-shadow: inset 0 -4px 0 #CBF8DF;
+  border-bottom: 1px solid #D9D2E9;
   background: transparent;
   transition: background 150ms ease;
+  padding: 2px;
+  border-radius: 2px;
 }
 
 .article-content a:hover,
 .article-content a:focus {
-  background: #CBF8DF;
+  background: #D9D2E9;
 }
 
 .article-content hr {
@@ -310,7 +339,6 @@ pre > code, .highlight {
   }
 
   .content {
-    font-size: 19px;
     line-height: 1.6;
   }
 
